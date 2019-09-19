@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using FizzBuzz.Library;
 namespace FizzBuzzerTests
 {
     [TestFixture()]
@@ -10,7 +11,7 @@ namespace FizzBuzzerTests
         {
             var input = 1;
 
-            string output = FizzBuzz.Library.FizzBuzzer.Getvalue(input);
+            string output = FizzBuzzer.Getvalue(input);
 
             Assert.AreEqual("1", output);
         }
@@ -20,7 +21,7 @@ namespace FizzBuzzerTests
         {
             var input = 3;
 
-            string output = FizzBuzz.Library.FizzBuzzer.Getvalue(input);
+            string output = FizzBuzzer.Getvalue(input);
 
             Assert.AreEqual("Fizz", output);
         }
@@ -30,7 +31,7 @@ namespace FizzBuzzerTests
         {
             var input = 5;
 
-            string output = FizzBuzz.Library.FizzBuzzer.Getvalue(input);
+            string output = FizzBuzzer.Getvalue(input);
 
             Assert.AreEqual("Buzz", output);
         }
@@ -40,7 +41,7 @@ namespace FizzBuzzerTests
         {
             var input = 15;
 
-            string output = FizzBuzz.Library.FizzBuzzer.Getvalue(input);
+            string output = FizzBuzzer.Getvalue(input);
 
             Assert.AreEqual("FizzBuzz", output);
 
@@ -49,7 +50,7 @@ namespace FizzBuzzerTests
         [Test]
         public void FizzBuzzer_ReturnsDefault_WhenPassedInput([Values(1, 2, 4, 7)] int input)
         {
-            string output = FizzBuzz.Library.FizzBuzzer.Getvalue(input);
+            string output = FizzBuzzer.Getvalue(input);
             Assert.AreEqual(input.ToString(), output);
 
         }
@@ -57,7 +58,7 @@ namespace FizzBuzzerTests
         [Test]
         public void FizzBuzzer_ReturnsFizz_WhenPassedInput([Values(3, 6, 9, 12)] int input)
         {
-            string output = FizzBuzz.Library.FizzBuzzer.Getvalue(input);
+            string output = FizzBuzzer.Getvalue(input);
             Assert.AreEqual("Fizz", output);
 
         }
@@ -65,14 +66,14 @@ namespace FizzBuzzerTests
         [Test]
         public void FizzBuzzer_ReturnsBuzz_WhenPassedInput([Values(5, 10, 20, 25)] int input)
         {
-            string output = FizzBuzz.Library.FizzBuzzer.Getvalue(input);
+            string output = FizzBuzzer.Getvalue(input);
             Assert.AreEqual("Buzz", output);
         }
 
         [Test]
         public void FizzBuzzer_ReturnsFizzBuzz_WhenPassedInput([Values(15, 30, 45, 60)] int input)
         {
-            string output = FizzBuzz.Library.FizzBuzzer.Getvalue(input);
+            string output = FizzBuzzer.Getvalue(input);
             Assert.AreEqual("FizzBuzz", output);
         }
     }
