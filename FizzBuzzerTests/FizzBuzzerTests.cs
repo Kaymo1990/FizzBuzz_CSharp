@@ -45,5 +45,13 @@ namespace FizzBuzzerTests
             Assert.AreEqual("FizzBuzz", output);
 
         }
+
+        [Test]
+        public void FizzBuzzer_ReturnsDefault_WhenPassedInput([Values(1, 2, 4, 7)] int input)
+        {
+            string output = FizzBuzz.Library.FizzBuzzer.Getvalue(input);
+            Assert.AreEqual(input.ToString(), output);
+
+        }
     }
 }
